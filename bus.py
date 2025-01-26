@@ -14,10 +14,10 @@ def marquee_text_multiple_lines(lines, width=30, delay=0.1):
         for line in padded_lines:
             part = line[i:i+width]  # Lấy đoạn văn bản hiển thị
             sys.stdout.write(part + "\n")  # Hiển thị từng dòng
-        sys.stdout.write("\033[F" * len(lines))  # Đưa con trỏ lên trên để viết đè
+        sys.stdout.write("\033[F" * len(lines)) 
         sys.stdout.flush()
         time.sleep(delay)
-    print("\n" * len(lines))  # Xuống dòng sau khi hoàn thành
+    print("\n" * len(lines))  # Xuống dòng
 for i in range(99):
  os.system('cls' if os.name == 'nt' else 'clear')
  marquee_text_multiple_lines(
